@@ -5,3 +5,70 @@
 
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
 
+$navbar-lrm-height: 4px;
+$navbar-lrm-color: #7ABC30;
+
+.portlet:hover {
+    .portlet-topper {
+        z-index: 951;
+    }
+}
+
+.navbar-lrm {
+	background-color: #FFF; 
+}
+
+.navbar-user .navbar-user {
+    display: none;
+}
+
+@media (max-width: 767px) {
+	.col-xs-expand {
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+}
+
+.search-toggle {
+    .portlet-search {
+        .lfr-ddm-field-group-inline {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            margin-bottom: 0;
+        }
+    }
+
+	@media (min-width: 768px) {
+		background-color: #FFF;
+		border-bottom: $navbar-lrm-height solid $navbar-lrm-color;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+	}
+}
+
+.navbar-lrm {
+	border-bottom: $navbar-lrm-height solid $navbar-lrm-color;
+	
+	.form-control {
+		width: 100%;
+	}
+}
+
+.btn-search {
+	.icon-times {
+		display: none;
+	}
+	
+	&.active {
+		.icon-lens {
+			display: none;
+		}
+		
+		.icon-times {
+			display: inline-block;
+		}
+	}
+}
