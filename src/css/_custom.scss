@@ -5,6 +5,8 @@
 
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
 
+@import "./partials/footer";
+
 $navbar-lrm-height: 4px;
 $navbar-lrm-color: #7ABC30;
 
