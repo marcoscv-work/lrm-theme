@@ -189,6 +189,14 @@
             </span>
             <span class="sr-only">Next</span>
         </a>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#carouselControls').carousel({
+                    interval: 0
+                });
+            });
+        </script>
     </div>
 
 </div>
