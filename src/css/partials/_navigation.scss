@@ -2,6 +2,10 @@
     background-color: #FFF;
     border-bottom: $navbar-lrm-height solid $navbar-lrm-color;
 
+    .form-control {
+        width: 100%;
+    }
+
     &::after {
 		background-color: $brand-color-light;
 		content: '';
@@ -13,8 +17,9 @@
 		z-index: -1;
 	}
 
-	.nav-item.active {
-		position: relative;
+    .nav-item {
+        &.active {
+            position: relative;
 
             @include media-breakpoint-up(md) {
                 &::after {
@@ -30,16 +35,17 @@
                     transition: all 0.35s ease;
                 }
 
-			&.out::after {
-				opacity: 0;
-				top: 230%;
-			}
-		}
-	}
+                &.out::after {
+                    opacity: 0;
+                    top: 230%;
+                }
+            }
+        }
 
-	.form-control {
-		width: 100%;
-	}
+        .lexicon-icon {
+            padding: 3px;
+        }
+    }
 }
 
 .search-toggle {
