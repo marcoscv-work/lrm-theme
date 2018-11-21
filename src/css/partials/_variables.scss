@@ -1,12 +1,18 @@
+$brand-color: #84B816;
+$brand-color-light: #E5ECE0;
+
+
 $navbar-lrm-height: 4px;
-$navbar-lrm-color: #7ABC30;
+$navbar-lrm-color: $brand-color;
+$navbar-lrm-stamp-top: 95%;
+$navbar-lrm-stamp-size: 12px;
 
 $cards-grid-gutter-width: 24px !default;
 
 $cards-per-line: (
-        xs: 1,
-        sm: 2,
-        md: 2,
-        lg: 4,
-        xl: 4
+	xs: 1,
+	sm: 2,
+	md: 2,
+	lg: 4,
+	xl: 4
 );
