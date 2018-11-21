@@ -15,4 +15,11 @@ $(document).ready(function() {
 	$('#searchCollapse').on('hide.bs.collapse', function () {
 		$('.navbar-lrm .nav-item.active').removeClass('out');
 	});
+
+	$('.lfr-nav-child-toggle').click(function(event) {
+		if (parseInt($(window).width()) < 768) {
+			event.preventDefault();
+			$(this).parents('li').toggleClass('open');
+		}
+	});
 });
