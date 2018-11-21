@@ -3,13 +3,13 @@
     border-bottom: $navbar-lrm-height solid $navbar-lrm-color;
 
     &::after {
-		content: '';
-		position: absolute;
-		height: 320px;
 		background-color: $brand-color-light;
-		top: 100%;
+		content: '';
+		height: 320px;
 		left: 0;
+		position: absolute;
 		right: 0;
+		top: 100%;
 		z-index: -1;
 	}
 
@@ -18,21 +18,21 @@
 
 		@media (min-width: 767px) {
 			&::after {
-				content: '';
-				position: absolute;
-				opacity: 1;
-				transition: all 0.35s ease;
-				left: 50%;
-				top: $navbar-lrm-stamp-top;
-				transform: translateX(-50%);
+				border-bottom: $navbar-lrm-stamp-size solid $navbar-lrm-color;
 				border-left: $navbar-lrm-stamp-size solid transparent;
 				border-right: $navbar-lrm-stamp-size solid transparent;
-				border-bottom: $navbar-lrm-stamp-size solid $navbar-lrm-color;
+				content: '';
+				left: 50%;
+				opacity: 1;
+				position: absolute;
+				top: $navbar-lrm-stamp-top;
+				transform: translateX(-50%);
+				transition: all 0.35s ease;
 			}
 
 			&.out::after {
-				top: 230%;
 				opacity: 0;
+				top: 230%;
 			}
 		}
 	}
@@ -45,10 +45,10 @@
 .search-toggle {
     background-color: #FFF;
     border-bottom: $navbar-lrm-height solid $navbar-lrm-color;
-    position: absolute;
-    top: 100%;
     left: 0;
+    position: absolute;
     right: 0;
+    top: 100%;
     z-index: 1;
 
     .form-group {
