@@ -1,22 +1,23 @@
-<!-- <footer class="footer navbar navbar-expand-md navbar-light navbar-lrm"> -->
-<footer class="footer navbar navbar-expand-md navbar-light navbar-lrm">
+<footer class="footer">
   <div class="container">
-    <a class="navbar-brand" href="#">LME Digital</a>
+    <div class="align-items-center row text-center text-sm-left">
+      <div class="col-xs-12 col-sm">
+        <a class="h1 text-default" href="#">LME Digital</a>
+      </div>
 
-    <div class="form-inline order-md-2 col-xs-expand">
-      <div class="inline-flex">
-        <button class="btn">
+      <div class="col-xs-12 col-sm-auto">
+        <a class="btn btn-outline-borderless btn-outline-secondary btn-sm" href="#">
           <span class="">X</span>
-        </button>
-        <button class="btn">
+        </a>
+        <a class="btn btn-outline-borderless btn-outline-secondary btn-sm" href="#">
           <span class="">X</span>
-        </button>
-        <button class="btn">
+        </a>
+        <a class="btn btn-outline-borderless btn-outline-secondary btn-sm" href="#">
           <span class="">X</span>
-        </button>
-        <button class="btn">
+        </a>
+        <a class="btn btn-outline-borderless btn-outline-secondary btn-sm" href="#">
           <span class="">X</span>
-        </button>
+        </a>
       </div>
     </div>
   </div>
