@@ -33,21 +33,20 @@
 
 	<#if show_temp_content>
 		<#include "${full_templates_path}/temp_content.ftl" />
-	<#else>
-		<section class="container-fluid" id="content">
-			<#if selectable>
-				<@liferay_util["include"] page=content_include />
-			<#else>
-				${portletDisplay.recycle()}
-
-				${portletDisplay.setTitle(the_title)}
-
-				<@liferay_theme["wrap-portlet"] page="portlet.ftl">
-					<@liferay_util["include"] page=content_include />
-				</@>
-			</#if>
-		</section>
 	</#if>
+	<section class="container-fluid" id="content">
+		<#if selectable>
+			<@liferay_util["include"] page=content_include />
+		<#else>
+			${portletDisplay.recycle()}
+
+			${portletDisplay.setTitle(the_title)}
+
+			<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+				<@liferay_util["include"] page=content_include />
+			</@>
+		</#if>
+	</section>
 
 	<#include "${full_templates_path}/footer.ftl" />
 </div>
