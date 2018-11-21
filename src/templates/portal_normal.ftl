@@ -21,7 +21,11 @@
 <@liferay.control_menu />
 
 <div class="pt-0" id="wrapper">
-	<header id="banner">
+	<#if header_margin_bottom>
+		<header class="mb-5" id="banner">
+	<#else>
+		<header id="banner">
+	</#if>
 		<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
 
 		<#include "${full_templates_path}/navigation.ftl" />
