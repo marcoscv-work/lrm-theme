@@ -1,0 +1,6 @@
+@include media-breakpoint-down(sm) {
+	.col-xs-expand {
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+}
