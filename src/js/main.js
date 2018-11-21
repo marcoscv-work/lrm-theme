@@ -1,24 +1,9 @@
-// AUI().ready(
-// 	'liferay-sign-in-modal',
-// 	function(A) {
-// 		var signIn = A.one('.sign-in > a');
+$('#collapseExample').on('shown.bs.collapse', function () {
+	$('#navbarSupportedContent').collapse('hide');
+	nodeB = $(".search-toggle .form-control");
+	$(nodeB).focus();
+})
 
-// 		if (signIn && signIn.getData('redirect') !== 'true') {
-// 			signIn.plug(Liferay.SignInModal);
-// 		}
-// 	}
-// );
-
-$(".btn-search").click(function() {
-    searchNode = $(".search-toggle");
-
-    if ($(searchNode).hasClass("d-md-none")) {
-        $(searchNode).removeClass("d-md-none");
-        $(this).addClass("active");
-        $(".search-toggle .form-control").focus();
-    } else {
-        $(searchNode).addClass("d-md-none");			
-        $(this).removeClass("active");
-    }
-}
-);
+$('#navbarSupportedContent').on('shown.bs.collapse', function () {
+	$('#collapseExample').collapse('hide');
+})

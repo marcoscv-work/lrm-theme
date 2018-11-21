@@ -23,31 +23,29 @@
 <div class="pt-0" id="wrapper">
 	<header id="banner">
 		<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
+
 		<#include "${full_templates_path}/navigation.ftl" />
 	</header>
 
-	<section id="content">
-		<h1 class="hide-accessible">${the_title}</h1>
-
-		<#if selectable>
-			<@liferay_util["include"] page=content_include />
-		<#else>
-			${portletDisplay.recycle()}
-
-			${portletDisplay.setTitle(the_title)}
-
-			<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+	<#if show_temp_content>
+		<#include "${full_templates_path}/temp_content.ftl" />
+	<#else>
+		<section class="container-fluid" id="content">
+			<#if selectable>
 				<@liferay_util["include"] page=content_include />
-			</@>
-		</#if>
-	</section>
+			<#else>
+				${portletDisplay.recycle()}
+
+				${portletDisplay.setTitle(the_title)}
+
+				<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+					<@liferay_util["include"] page=content_include />
+				</@>
+			</#if>
+		</section>
+	</#if>
 
 	<#include "${full_templates_path}/footer.ftl" />
-	<#--  <footer id="footer" role="contentinfo">
-		<p class="powered-by">
-			<@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a>
-		</p>
-	</footer>  -->
 </div>
 
 <@liferay_util["include"] page=body_bottom_include />
@@ -55,7 +53,6 @@
 <@liferay_util["include"] page=bottom_include />
 
 <!-- inject:js -->
-2027
 <!-- endinject -->
 
 </body>

@@ -6,6 +6,9 @@
 		<version>7.1.0+</version>
 	</compatibility>
 	<theme id="lrm" name="lrm">
+		<settings>
+			<setting configurable="true" key="show-temp-content" type="checkbox" value="true" />
+		</settings>
 		<template-extension>ftl</template-extension>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>

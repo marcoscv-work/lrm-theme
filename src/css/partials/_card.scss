@@ -1,0 +1,28 @@
+.card-deck-lrm {
+	.card-lrm {
+		background-color: $navbar-lrm-color;
+
+		.h1 {
+			@media (min-width: 576px) {
+				position: absolute;
+				bottom: 0;
+				font-size: 32px;
+			}
+
+			font-weight: 700;
+			padding: 0 10px 10px 34px;
+		}
+	}
+	
+	.card {
+		margin-bottom: 20px;
+	}
+
+	@each $name, $breakpoint in $grid-breakpoints {
+		@media (min-width: $breakpoint) {
+			.card {
+				flex: 0 0 calc(#{100/map-get($cards-per-line, $name)}% - #{$cards-grid-gutter-width});
+			}
+		}
+	}
+}
