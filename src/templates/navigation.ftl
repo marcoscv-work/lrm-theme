@@ -1,0 +1,42 @@
+<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone")>
+
+<nav class="navbar navbar-expand-md navbar-light navbar-lrm">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			<img alt="${logo_description}" height="40" src="${site_logo}" />
+		</a>
+		<div class="form-inline order-md-2 col-xs-expand">
+			<a class="btn btn-outline-borderless btn-outline-secondary btn-sm btn-search collapsed ml-auto" data-toggle="collapse" 
+				href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+				<span class="icon-lens">
+					<@liferay_ui["icon"] icon="search" markupView="lexicon" />
+				</span>
+				<span class="icon-times">
+					<@liferay_ui["icon"] icon="times" markupView="lexicon" />
+				</span>
+			</a>
+			
+			<div class="collapse search-toggle" id="collapseExample">
+				<!-- portlet search -->
+				<div class="p-2">
+					<@liferay.search default_preferences="${freeMarkerPortletPreferences}" />
+				</div>
+			</div>
+		</div>
+
+		<div class="user-bar order-md-2 m-3">
+			<@liferay.user_personal_bar />
+		</div>
+		
+		<button class="btn-sm navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="collapse navbar-collapse order-md-1" id="navbarSupportedContent">
+			<!-- portlet navigation -->
+				<@liferay.navigation_menu default_preferences="${freeMarkerPortletPreferences}" />
+		</div>
+	</div>
+</nav>
+
+<#assign VOID = freeMarkerPortletPreferences.reset()>

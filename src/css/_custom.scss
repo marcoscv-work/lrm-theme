@@ -5,3 +5,18 @@
 
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
 
+@import "partials/variables";
+
+@import "portlet/portlet_interaction";
+
+@import "portlet/portlet_decorator";
+
+@import "partials/navigation";
+
+@import "partials/footer";
+
+@import "partials/user_bar";
+
+@import "partials/carousel";
+
+@import "partials/card";
