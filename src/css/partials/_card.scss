@@ -3,7 +3,7 @@
 		background-color: $navbar-lrm-color;
 
 		.h1 {
-			@media (min-width: 576px) {
+			@include media-breakpoint-up(sm) {
 				bottom: 0;
 				font-size: 32px;
 				position: absolute;
