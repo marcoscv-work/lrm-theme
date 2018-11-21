@@ -1,9 +1,18 @@
-$('#collapseExample').on('shown.bs.collapse', function () {
-	$('#navbarSupportedContent').collapse('hide');
-	nodeB = $(".search-toggle .form-control");
-	$(nodeB).focus();
-})
+$(document).ready(function() {
+	$('#searchCollapse').on('shown.bs.collapse', function () {
+		$('#navbarCollapse').collapse('hide');
+		$(".search-toggle .form-control").focus();
+	});
 
-$('#navbarSupportedContent').on('shown.bs.collapse', function () {
-	$('#collapseExample').collapse('hide');
-})
+	$('#navbarCollapse').on('shown.bs.collapse', function () {
+		$('#searchCollapse').collapse('hide');
+	});
+
+	$('#searchCollapse').on('show.bs.collapse', function () {
+		$('.navbar-lrm .nav-item.active').addClass('out');
+	});
+
+	$('#searchCollapse').on('hide.bs.collapse', function () {
+		$('.navbar-lrm .nav-item.active').removeClass('out');
+	});
+});
