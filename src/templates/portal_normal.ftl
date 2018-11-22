@@ -22,7 +22,7 @@
 
 <div class="pt-0" id="wrapper">
 	<#if header_margin_bottom>
-		<header class="mb-5" id="banner">
+		<header class="mb-3 mb-md-5" id="banner">
 	<#else>
 		<header id="banner">
 	</#if>
