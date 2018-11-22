@@ -1,0 +1,33 @@
+.nav-cubes {
+    margin-right: ($grid-gutter-width / -2);
+    margin-left: ($grid-gutter-width / -2);
+
+    .nav-item {
+        flex: 1 1 100%;
+        text-align: center;
+
+        @include media-breakpoint-up(sm) {
+            flex: 1 1 50%;
+        }
+
+        @include media-breakpoint-up(md) {
+            flex: 1 1 33.33%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            flex: 1 1;
+        }
+
+        a {
+            background-color: $light;
+            color: $dark;
+            border-radius: 0;
+            margin: ($grid-gutter-width / 2);
+
+            &.active, &:hover {
+                background-color: darken($light, 5%);
+                color: $dark;
+            }
+        }
+    }
+}
