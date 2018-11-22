@@ -53,6 +53,12 @@
             }
         }
 
+        .dropdown-menu > li > a {
+            &:hover, &:focus {
+                background-color: $brand-color-light;
+            }
+        }
+                
         .lexicon-icon {
             padding: 3px;
         }
