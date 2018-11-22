@@ -5,8 +5,12 @@
 		.h1 {
 			@include media-breakpoint-up(sm) {
 				bottom: 0;
-				font-size: 32px;
+				font-size: 28px;
 				position: absolute;
+			}
+
+			@include media-breakpoint-up(xl) {
+				font-size: 32px;
 			}
 
 			font-weight: 700;
