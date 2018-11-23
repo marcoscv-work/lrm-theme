@@ -7,16 +7,24 @@
 
       <div class="col-xs-12 col-sm-auto">
         <a class="btn btn-outline-borderless btn-outline-secondary btn-sm" href="#">
-          <span class="">X</span>
+          <span class="">
+            <@liferay_ui["icon"] icon="twitter" markupView="lexicon" />
+          </span>
         </a>
         <a class="btn btn-outline-borderless btn-outline-secondary btn-sm" href="#">
-          <span class="">X</span>
+          <span class="">
+            <@liferay_ui["icon"] icon="social-facebook" markupView="lexicon" />
+          </span>
         </a>
         <a class="btn btn-outline-borderless btn-outline-secondary btn-sm" href="#">
-          <span class="">X</span>
+          <span class="">
+            <@liferay_ui["icon"] icon="social-linkedin" markupView="lexicon" />
+          </span>
         </a>
         <a class="btn btn-outline-borderless btn-outline-secondary btn-sm" href="#">
-          <span class="">X</span>
+          <span class="">
+            <@liferay_ui["icon"] icon="video" markupView="lexicon" />
+          </span>
         </a>
       </div>
     </div>
