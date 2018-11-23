@@ -250,7 +250,6 @@
 
     <#include "${full_templates_path}/videos.ftl" />
 
-    <!-- item cube list -->
     <ul class="nav nav-pills nav-cubes">
         <li class="nav-item">
             <a class="nav-link" href="#">
@@ -289,4 +288,6 @@
             </a>
         </li>
     </ul>
+
+    <#include "${full_templates_path}/navbar_lrm_line.ftl" />
 </div>

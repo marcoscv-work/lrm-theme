@@ -64,3 +64,10 @@
         }
     }
 }
+
+.navbar-lrm-underline.navbar-underline {
+    &.navbar-expand-md .navbar-nav .nav-link.active:after,
+    .navbar-toggler-link:after {
+        background-color: $brand-color;
+    }
+}
