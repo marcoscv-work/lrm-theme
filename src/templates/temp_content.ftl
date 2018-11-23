@@ -248,6 +248,7 @@
         </script>
     </div>
 
+    <#include "${full_templates_path}/videos.ftl" />
 
     <!-- item cube list -->
     <ul class="nav nav-pills nav-cubes">
