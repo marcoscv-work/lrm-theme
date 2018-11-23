@@ -1,0 +1,18 @@
+.nav-lrm {
+	.nav-link {
+		&.active {
+			background-color: rgba(122, 188, 48, 0.1);
+			border-radius: 4px;
+		}
+	}
+
+	a {
+		color: #2C3338;
+	}
+
+	.img-fluid {
+		@include media-breakpoint-down(sm) {
+			max-width: 120px;
+		}
+	}
+}

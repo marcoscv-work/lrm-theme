@@ -199,4 +199,6 @@
         </script>
     </div>
 
+    <#include "${full_templates_path}/videos.ftl" />
+
 </div>
