@@ -4,7 +4,11 @@
 			background-color: rgba(122, 188, 48, 0.1);
 			border-radius: 4px;
 		}
-	}
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-left: 100px;
+    }
 
 	a {
 		color: #2C3338;
