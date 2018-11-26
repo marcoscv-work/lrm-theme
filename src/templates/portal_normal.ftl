@@ -20,31 +20,33 @@
 
 <@liferay.control_menu />
 
+<#assign default_preferences = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone")>
+
 <div class="pt-0" id="wrapper">
 	<#if header_margin_bottom>
 		<header class="mb-3 mb-md-5" id="banner">
 	<#else>
 		<header id="banner">
 	</#if>
-		<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
-
 		<#include "${full_templates_path}/navigation.ftl" />
 	</header>
 
-	<#if show_temp_content>
-		<#include "${full_templates_path}/temp_content.ftl" />
-	</#if>
-	<section class="container-fluid" id="content">
-		<#if secondary_page_type>
+	<#if secondary_page_type>
+		<div class="container">
 			<nav id="breadcrumbs">
-				<@liferay.breadcrumbs />
+				<@liferay.breadcrumbs default_preferences="${freeMarkerPortletPreferences}" />
 			</nav>
 			
 			<h1>${the_title}</h1>
 			
 			<#include "${full_templates_path}/navbar_lrm_line.ftl" />
-		</#if>
+		</div>
+	</#if>
 
+	<#if show_temp_content>
+		<#include "${full_templates_path}/temp_content.ftl" />
+	</#if>
+	<section class="container-fluid" id="content">
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
 		<#else>

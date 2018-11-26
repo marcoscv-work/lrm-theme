@@ -66,6 +66,9 @@
 }
 
 .navbar-lrm-underline.navbar-underline {
+    background-color: transparent;
+    margin-bottom: 15px;
+
     &.navbar-expand-md .navbar-nav .nav-link.active:after,
     .navbar-toggler-link:after {
         background-color: $brand-color;
