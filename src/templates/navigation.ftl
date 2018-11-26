@@ -1,5 +1,3 @@
-<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone")>
-
 <nav class="navbar navbar-expand-md navbar-light navbar-lrm">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="#">
@@ -17,7 +15,8 @@
 
 			<div class="collapse search-toggle" id="searchCollapse">
 				<div class="p-2">
-					<@liferay.search default_preferences="${freeMarkerPortletPreferences}" />
+					<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
+					<@liferay.search default_preferences="${preferences}" />
 				</div>
 			</div>
 		</div>
