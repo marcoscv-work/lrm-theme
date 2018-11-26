@@ -35,6 +35,16 @@
 		<#include "${full_templates_path}/temp_content.ftl" />
 	</#if>
 	<section class="container-fluid" id="content">
+		<#if secondary_page_type>
+			<nav id="breadcrumbs">
+				<@liferay.breadcrumbs />
+			</nav>
+			
+			<h1>${the_title}</h1>
+			
+			<#include "${full_templates_path}/navbar_lrm_line.ftl" />
+		</#if>
+
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
 		<#else>

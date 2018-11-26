@@ -9,6 +9,7 @@
 		<settings>
 			<setting configurable="true" key="show-temp-content" type="checkbox" value="true" />
 			<setting configurable="true" key="header-margin-bottom" type="checkbox" value="true" />
+			<setting configurable="true" key="secondary-page-type" type="checkbox" value="false" />
 		</settings>
 		<template-extension>ftl</template-extension>
 		<portlet-decorator id="barebone" name="Barebone">
